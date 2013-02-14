@@ -1,3 +1,11 @@
+$(document).ready(function() {
+  $('#start').click(function(){
+    event.preventDefault();
+    var size = prompt("How big do you want it?");
+    play(size);
+  });
+});
+
 function drawInitalBoard(gridSize) {
   var gridPixels = squaresToPixels(gridSize);
 
@@ -18,8 +26,8 @@ function moveSnake(snake) {
 }
 
 
-function play() {
-  var game = snakeGame(50);
+function play(size) {
+  var game = snakeGame(size);
   drawInitalBoard(game.gridSize);
   gameStep();
 
