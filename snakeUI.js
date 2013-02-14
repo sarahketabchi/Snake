@@ -13,7 +13,6 @@ function drawInitalBoard(gridSize) {
   $("#grid").width(gridPixels);
 };
 
-
 function squaresToPixels(num) {
   return num * 10;
 }
@@ -24,7 +23,6 @@ function moveSnake(snake) {
 
   $("#snake").stop().animate({'top': topPos, 'left': leftPos}, 250);
 }
-
 
 function play(size) {
   var game = snakeGame(size);
@@ -40,9 +38,7 @@ function play(size) {
         game.snake.turn("East");
         break;
       case 40: // Down
-        console.log("turn South");
         game.snake.turn("South");
-        console.log(game.snake.direction);
         break;
       case 37: // Left
         game.snake.turn("West");
@@ -54,10 +50,7 @@ function play(size) {
   function gameStep (){
     game.step();
     moveSnake(game.snake);
-    if (!game.gameOver()) {
-      console.log("Calling timer");
-      timer();
-    };
+    if (!game.gameOver()) { timer(); };
   };
 
   function timer(){

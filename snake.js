@@ -9,7 +9,6 @@ function initializeBoard(size){
   return grid;
 };
 
-
 // snake stuff
 function initializeSnake() {
   return {
@@ -36,7 +35,6 @@ function initializeSnake() {
     }
   };
 };
-
 
 // game stuff
 function snakeGame(gridSize) {
