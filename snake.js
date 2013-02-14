@@ -14,7 +14,6 @@ function initializeBoard(size){
 function initializeSnake() {
   return {
     direction: "East",
-    // location: [0, 0],
     location: { row: 0, col: 0},
     turn: function turn(dir) {
       this.direction = dir;
