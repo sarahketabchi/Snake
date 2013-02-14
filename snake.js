@@ -25,13 +25,13 @@ function initializeSnake() {
           this.location.row = this.location.row - 1;
           break;
         case "East":
-          this.location.col = this.location.col - 1;
+          this.location.col = this.location.col + 1;
           break;
         case "South":
           this.location.row = this.location.row + 1;
           break;
         case "West":
-          this.location.col = this.location.col + 1;
+          this.location.col = this.location.col - 1;
           break;
       };
     }
@@ -39,24 +39,27 @@ function initializeSnake() {
 };
 
 
-
-
-
-
-
-
 // game stuff
 function snakeGame(gridSize) {
   var board = initializeBoard(gridSize);
   var snake =  initializeSnake();
+  var step = function(){
+    snake.move();
+  };
+
+  function gameOver() {
+    return snake.location.row < 0 || snake.location.row > (gridSize - 1) ||
+           snake.location.col < 0 || snake.location.col > (gridSize - 1);
+
+  };
 
   return {
     board: board,
-    snake: snake
+    snake: snake,
+    step: step,
+    gameOver: gameOver
   };
 }
-
-
 
 
 // node stuff
