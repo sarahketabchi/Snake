@@ -1,0 +1,17 @@
+#grid {
+  position: relative;
+/*  height: 500px;
+  width: 500px;*/
+  border: 1px solid black;
+  display: block;
+}
+
+#snake {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 10px;
+  width: 10px;
+  background-color: green;
+  display: block;
+}

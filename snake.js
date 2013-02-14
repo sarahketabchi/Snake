@@ -57,12 +57,13 @@ function snakeGame(gridSize) {
     board: board,
     snake: snake,
     step: step,
-    gameOver: gameOver
+    gameOver: gameOver,
+    gridSize: gridSize
   };
 }
 
 
-// node stuff
-module.exports = {
-  snakeGame: snakeGame
-};
+// // node stuff
+// module.exports = {
+//   snakeGame: snakeGame
+// };
